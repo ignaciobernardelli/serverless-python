@@ -16,3 +16,16 @@ docker tag serverless-python gcr.io/glossy-radio-321418/serverless-python
 
 docker push gcr.io/glossy-radio-321418/serverless-python
 ```
+
+## Via Gcloud Build
+
+```
+gcloud builds submit --tag gcr.io/glossy-radio-321418/serverless-python-2 .
+```
+
+
+## Deploy
+
+```
+gcloud run deploy serverless-python --image gcr.io/glossy-radio-321418/serverless-python-2 --platform managed --region us-west1 
+```
